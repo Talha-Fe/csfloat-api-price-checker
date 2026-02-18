@@ -320,7 +320,6 @@ def main():
             rows.append((name,f"{price:.2f}",f"{target:.2f}",status))
 
             if hit:
-                beep()
                 log_event(f"TARGET FOUND {name} {price:.2f}")
                 log_event(f"https://csfloat.com/item/{lid}")
             elif changed:
@@ -346,4 +345,5 @@ if __name__=="__main__":
     except Exception as e:
         print("CRASH:",e)
         input()
+
 
