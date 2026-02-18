@@ -22,13 +22,13 @@ BASE_DIR = get_base_dir()
 ENV_PATH = os.path.join(BASE_DIR, ".env")
 
 if not os.path.exists(ENV_PATH):
-    print("\n.env bulunamadı!")
-    api_input = input("Lütfen CSFLOAT API KEY gir: ").strip()
+    print("\n.can't find .env")
+    api_input = input("Please ENTER CSFloat API key: ").strip()
 
     with open(ENV_PATH, "w", encoding="utf-8") as f:
         f.write(f"CSFLOAT_API_KEY={api_input}")
 
-    print(".env oluşturuldu ✔\n")
+    print(".env created.\n")
 
 load_dotenv(ENV_PATH)
 
@@ -97,10 +97,6 @@ def hsv_to_rgb(h, s, v):
     return int(r * 255), int(g * 255), int(b * 255)
 
 def gradient_text_wave(text: str, phase: float):
-    """
-    Soldan sağa RGB gradient + dalgalı (phase ile animasyon).
-    Truecolor ANSI kullanır.
-    """
     lines = text.splitlines(True) 
     widths = [len(l.rstrip("\n")) for l in lines if l.strip("\n") != ""]
     max_w = max(widths) if widths else 1
@@ -135,18 +131,11 @@ def banner():
 
 enable_ansi_on_windows()
 
-
-def steam_link(name):
-    return "https://steamcommunity.com/market/listings/730/" + urllib.parse.quote(name)
-
 def now():
     return datetime.now().strftime("%H:%M:%S")
 
 def log_event(msg):
     EVENT_HISTORY.append(f"[{now()}] {msg}")
-
-def beep():
-    print("\a", end="", flush=True)
 
 def clear():
     os.system("cls" if os.name=="nt" else "clear")
@@ -357,3 +346,4 @@ if __name__=="__main__":
     except Exception as e:
         print("CRASH:",e)
         input()
+
