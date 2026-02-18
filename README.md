@@ -8,7 +8,7 @@ Download the latest version <a href="https://github.com/Talha-Fe/csfloat-api-pri
 
 # How to use?
 
-Download the exe. (hight recomend you to put exe file in a folder *it will create .env and config files) <br>
+Download the exe. (highly recomend you to put exe file in a folder *it will create .env and config files) <br>
 Paste your API key. <br>
 Type item names that you wanted to check prices. (IMPORTANT: You need to type the full name of item example: AK-47 | Redline (Field-Tested)) <br>
 Put your highest price point.<br>
