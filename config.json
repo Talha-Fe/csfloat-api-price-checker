@@ -1,0 +1,9 @@
+{
+  "intervalSeconds": 15,
+  "items": [
+    {
+      "market_hash_name": "AK-47 | Redline (Field-Tested)",
+      "target_usd": 40.0
+    }
+  ]
+}
